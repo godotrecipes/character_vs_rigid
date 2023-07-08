@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbme678wg3lbh"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_822g6"]
+[ext_resource type="Texture2D" uid="uid://11xgbp2ivypr" path="res://assets/tilesheet_complete.png" id="2_kjn4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcgf7"]
+size = Vector2(62, 62)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
+floor_snap_length = 40.0
+script = ExtResource("1_822g6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kjn4x")
+region_enabled = true
+region_rect = Rect2(0, 704, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wcgf7")

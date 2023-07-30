@@ -832,13 +832,13 @@ layer_0/tile_data = PackedInt32Array(589824, 1, 6, 458752, 1, 6, 524288, 1, 6, 5
 position = Vector2(248, 511)
 
 [node name="Box" parent="." instance=ExtResource("2_3j1td")]
-position = Vector2(448, 528)
+position = Vector2(450, 528)
 
 [node name="Box2" parent="." instance=ExtResource("2_3j1td")]
-position = Vector2(448, 456)
+position = Vector2(450, 456)
 
 [node name="Box3" parent="." instance=ExtResource("2_3j1td")]
-position = Vector2(448, 384)
+position = Vector2(450, 384)
 
 [node name="Box4" parent="." instance=ExtResource("2_3j1td")]
 position = Vector2(136, 440)

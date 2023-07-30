@@ -24,3 +24,7 @@ window/dpi/allow_hidpi=false
 2d_physics/layer_1="world"
 2d_physics/layer_2="player"
 2d_physics/layer_3="items"
+
+[physics]
+
+2d/default_gravity=1200.0

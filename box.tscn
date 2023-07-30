@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c65w3jy2365ho"]
+[gd_scene load_steps=4 format=3 uid="uid://c65w3jy2365ho"]
 
+[ext_resource type="Script" path="res://box.gd" id="1_4f2v0"]
 [ext_resource type="Texture2D" uid="uid://11xgbp2ivypr" path="res://assets/tilesheet_complete.png" id="2_ufk2y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgj33"]
@@ -8,8 +9,9 @@ size = Vector2(64, 64)
 [node name="Box" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 7
-max_contacts_reported = 2
+max_contacts_reported = 1
 contact_monitor = true
+script = ExtResource("1_4f2v0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_ufk2y")
@@ -18,3 +20,5 @@ region_rect = Rect2(1152, 512, 64, 64)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hgj33")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

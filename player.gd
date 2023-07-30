@@ -1,8 +1,7 @@
 extends CharacterBody2D
 
-
 var speed = 350.0
-var jump_speed = -500.0
+var jump_speed = -600.0
 var push_force = 80.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -18,6 +17,7 @@ func _physics_process(delta):
 	velocity.x = direction * speed
 
 	move_and_slide()
+
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
